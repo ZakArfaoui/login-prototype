@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add shopping lis item</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">enter item</label>
+        <input type="text" id="item" autofocus />
+      </div>
+      <button type="submit">add item</button>
+    </form>
+    <script>
+      const electron = require("electron");
+      const { ipcRenderer } = require("electron");
+      const form = document.querySelector("form");
+      form.addEventListener("submit", submitForm);
+      babaali;
+
+      function submitForm(e) {
+        e.preventDefault();
+        const item = document.querySelector("#item").value;
+        ipcRenderer.send("item:add", item);
+      }
+    </script>
+  </body>
+</html>
